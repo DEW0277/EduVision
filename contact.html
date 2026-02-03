@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edu Vision | Biz Bilan Bog'laning</title>
+    <meta
+      name="description"
+      content="Keyingi avlod ta'limini his eting. Immersiv, futuristik va premium o'quv muhitlari."
+    />
+    `
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="noise-overlay"></div>
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="./photo_2026-01-23_10-49-55-removebg-preview.png"
+            alt="Edu Vision Logotipi"
+            class="logo-img"
+          />
+        </a>
+      </div>
+      <nav class="desktop-nav">
+        <a href="technology.html">Tarif</a>
+        <a href="contact.html" class="active">A'loqa</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="contact" class="contact-section" style="padding-top: 180px">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Bog'lanish</span>
+            <h2>Biz Bilan Bog'laning</h2>
+            <p>
+              Ta'lim kelajagi haqida savollaringiz bormi? Biz javob berishga
+              tayyormiz.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info-card">
+              <div class="contact-detail">
+                <h4>Bosh Qarorgoh</h4>
+                <p>
+                  Beruniy shoh ko'chasi b1,<br />
+                  Тоshkent, Toshkent, O’zbekiston
+                </p>
+              </div>
+              <div class="contact-detail">
+                <h4>Bizga Elektron Pochta Yozing</h4>
+                <p>normalguys361@gmail.com</p>
+              </div>
+              <div class="contact-detail">
+                <h4>Ofislarimiz</h4>
+                <p>Toshkent</p>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form
+              class="contact-form"
+              onsubmit="event.preventDefault(); alert('Xabar muvaffaqiyatli yuborildi.');"
+            >
+              <div class="form-group">
+                <label for="name">To'liq Ism</label>
+                <input type="text" id="name" placeholder="Johongir" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Elektron Pochta Manzili</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="johongir@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Xabar</label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Sizga qanday yordam bera olamiz?"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="primary-btn" style="width: 100%">
+                Xabarni Yuborish
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h5 style="margin-bottom: 0px">EDU VISION</h5>
+          <p style="font-size: 0.8rem; color: #666; margin-top: 1rem">
+            Toshkent
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Platforma</h5>
+          <ul>
+            <li><a href="technology.html">Texnologiya</a></li>
+            <li><a href="#">Narxlar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Kompaniya</h5>
+          <ul>
+            <li><a href="#">Biz Haqimizda</a></li>
+            <li><a href="#">Karyera</a></li>
+            <li><a href="#">Matbuot</a></li>
+            <li><a href="contact.html">A'loqa</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Yuridik</h5>
+          <ul>
+            <li><a href="#">Maxfiylik Siyosati</a></li>
+            <li><a href="#">Xizmat Ko'rsatish Shartlari</a></li>
+            <li><a href="#">Cookie Siyosati</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        style="
+          text-align: center;
+          margin-top: 4rem;
+          color: #333;
+          font-size: 0.8rem;
+        "
+      >
+        &copy; 2026 Edu Vision Tashkiloti. Barcha huquqlar himoyalangan.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
