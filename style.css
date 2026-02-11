@@ -1151,3 +1151,247 @@ button:hover {
     max-width: 300px;
   }
 }
+
+/* Finance Section Styles */
+.finance-section {
+  background: linear-gradient(180deg, #0a0a0a 0%, var(--bg-color) 100%);
+  padding-bottom: 6rem;
+}
+
+.finance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.finance-card {
+  padding: 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Start subtle */
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Gradient Border Effect on Hover */
+.finance-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+  padding: 2px; /* Border width */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.finance-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.finance-card h3 {
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(90deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.finance-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem; /* Row spacing */
+}
+
+.finance-table th {
+  text-align: left;
+  padding: 1rem;
+  color: var(--accent-silver);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.finance-table td {
+  padding: 1.2rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.finance-table tr:first-child td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+.finance-table tr:first-child td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+/* Repeat for all rows if needed, but simplified: */
+.finance-table td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+.finance-table td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.finance-table tr:hover td {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.total-cost-box {
+  margin-top: auto;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.total-cost-box span:first-child {
+  font-size: 1rem;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.total-amount {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* ROI Card Enhancements */
+.roi-card-container {
+  justify-content: flex-start; /* Align to top */
+}
+
+.roi-header h3 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  line-height: 1;
+  background: linear-gradient(180deg, #fff, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.roi-list li {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.roi-list li:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.roi-list li span:first-child {
+  font-weight: 400;
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.highlight-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Special styling for the ROI calculation item to handle long text */
+.roi-list li:nth-child(3),
+.roi-list li:nth-child(4),
+.roi-list li:last-child {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+/* Formula Styling */
+.formula-text {
+  font-family: "Courier New", monospace;
+  background: rgba(0, 255, 128, 0.1); /* Subtle green tint */
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #aaddbb;
+  border: 1px solid rgba(0, 255, 128, 0.2);
+  width: 100%;
+}
+
+.roi-final-calculation {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.roi-percentage {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #4fffa8; /* Green pop */
+  margin-left: 0.5rem;
+  text-shadow: 0 0 20px rgba(79, 255, 168, 0.4);
+  display: block;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 968px) {
+  .finance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
