@@ -45,3 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+function toggleNode(element) {
+  // Boshqa barcha ochilgan bloklarni yopish (ixtiyoriy)
+  const allNodes = document.querySelectorAll('.node');
+  allNodes.forEach(node => {
+    if (node !== element) {
+      node.classList.remove('active');
+    }
+  });
+
+  // Tanlangan blokni ochish yoki yopish
+  element.classList.toggle('active');
+}
