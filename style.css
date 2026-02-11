@@ -1195,6 +1195,9 @@ button:hover {
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -1216,6 +1219,7 @@ button:hover {
   letter-spacing: 0.05em;
   background: linear-gradient(90deg, #fff, #aaa);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1311,6 +1315,7 @@ button:hover {
   line-height: 1;
   background: linear-gradient(180deg, #fff, #666);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1385,6 +1390,26 @@ button:hover {
 }
 
 @media (max-width: 968px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-content {
+    grid-template-columns: 1fr;
+  }
+
   .finance-grid {
     grid-template-columns: 1fr;
   }
@@ -1393,5 +1418,175 @@ button:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+}
+
+/* Mobile Navigation */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+  padding: 0;
+}
+
+.mobile-menu-btn span {
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: right 0.4s ease;
+  z-index: 150;
+}
+
+.mobile-menu a {
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+/* Hamburger Animation */
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .hero-title {
+    font-size: 3rem; /* Further reduce for mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .join-form {
+    flex-direction: column;
+  }
+
+  .join-form input {
+    min-width: auto;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* Grid Layouts Stack */
+  .vision-grid,
+  .tech-grid,
+  .finance-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Finance Table Scroll */
+  .finance-card {
+    padding: 1.5rem;
+    overflow-x: auto; /* Enable scrolling for table */
+  }
+
+  .finance-table {
+    min-width: 600px; /* Force scroll */
+  }
+
+  /* Workflow / Timeline Clean up */
+  .workflow-container {
+    width: 100%;
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .node {
+    margin: 0 !important; /* Reset specific margins */
+    align-self: center !important; /* Center all nodes */
+    width: 100%;
+    justify-content: center;
+  }
+
+  .node::after {
+    display: none; /* Hide complex connectors on mobile */
+  }
+
+  /* Simple vertical line connector for mobile */
+  .workflow-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+
+  /* Split Layout */
+  .split-layout {
+    gap: 3rem;
+  }
+
+  .split-layout.reverse-mobile {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
